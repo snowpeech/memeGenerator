@@ -1,0 +1,35 @@
+body,
+input {
+  font-family: "Roboto", sans-serif;
+}
+label,
+button {
+  display: block;
+  margin: 5px;
+}
+h1 {
+  font-family: "Anton", sans-serif;
+}
+
+#display {
+  font-family: "Anton", sans-serif;
+  font-size: 40px;
+  position: relative;
+  text-align: center;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  text-align: center;
+  margin: 10px;
+}
+
+.top {
+  position: absolute;
+  left: 45%;
+}
+
+.btm {
+  position: absolute;
+  left: 45%;
+  bottom: 5%;
+}

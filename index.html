@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Meme Generator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="app.css" />
+  </head>
+
+  <body>
+    <h1>Making Memes</h1>
+    <form id="input" method="post" enctype="multipart/form-data">
+      <label for="imageURL">Image URL: </label>
+      <input type="text" id="imageURL" name="imageURL" required />
+      <label for="topText">Top Text: </label>
+      <input type="text" id="topText" name="topText" />
+      <label for="btmText">Bottom Text: </label>
+      <input type="text" id="btmText" name="btmText" />
+
+      <button>Ready to lol</button>
+    </form>
+
+    <div id="display"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
