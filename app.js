@@ -28,4 +28,7 @@ function createCheckImg(image) {
 
 deleteBtn.addEventListener("click", function () {
   display.innerHTML = "";
+  topTextIn.value = "";
+  btmTextIn.value = "";
+  imageUrl.value = "";
 });
