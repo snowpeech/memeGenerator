@@ -3,8 +3,9 @@ const display = document.querySelector("#display");
 const imageUrl = document.querySelector("#imageURL");
 const topTextIn = document.querySelector("#topText");
 const btmTextIn = document.querySelector("#btmText");
+const deleteBtn = document.querySelector("#deletebtn");
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
   display.innerHTML = "";
   createText(topTextIn.value, "top");
@@ -24,3 +25,7 @@ function createCheckImg(image) {
   newImg.setAttribute("src", image);
   display.append(newImg);
 }
+
+deleteBtn.addEventListener("click", function () {
+  display.innerHTML = "";
+});
