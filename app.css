@@ -1,14 +1,49 @@
-body,
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Anton", sans-serif;
+  margin: auto;
+  padding: 40px;
+  font-size: 3.5em;
+  text-align: center;
+}
+
+p {
+  font-size: 0.8em;
+}
+
 input {
   font-family: "Roboto", sans-serif;
+  width: 50%;
 }
-label,
-button {
+
+label {
   display: block;
   margin: 5px;
 }
-h1 {
-  font-family: "Anton", sans-serif;
+
+button {
+  font-family: "Roboto", sans-serif;
+  display: block;
+  background-color: #0496cf;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-size: 1em;
+  padding: 0.6em;
+  box-shadow: none;
+  margin: auto;
+  margin-top: 20px;
+}
+
+button:hover {
+  border: 1px solid hsl(197, 88%, 46%);
+  color: #0496cf;
+  background: white;
+  font-weight: 600;
 }
 
 #display {
@@ -25,11 +60,22 @@ h1 {
 
 .top {
   position: absolute;
-  left: 50%;
 }
 
 .btm {
   position: absolute;
-  left: 50%;
-  bottom: 5%;
+  bottom: 6%;
+}
+
+.hidden {
+  display: none;
+}
+
+.meme {
+  display: flex;
+  justify-content: center;
+}
+
+.meme:hover {
+  opacity: 0.3;
 }

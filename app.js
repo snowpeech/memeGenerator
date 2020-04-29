@@ -7,28 +7,27 @@ const deleteBtn = document.querySelector("#deletebtn");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  display.innerHTML = "";
-  createText(topTextIn.value, "top");
-  createCheckImg(imageUrl.value);
-  createText(btmTextIn.value, "btm");
+  const meme = document.createElement("div");
+  meme.classList.add("meme");
+  createText(topTextIn.value, "top", meme);
+  setImg(imageUrl.value, meme);
+  createText(btmTextIn.value, "btm", meme);
+  display.append(meme);
 });
 
-function createText(textIn, position) {
+function createText(textIn, position, parentEl) {
   let newDiv = document.createElement("div");
   newDiv.classList.add("meme-text", "border", position);
   newDiv.innerText = textIn;
-  display.append(newDiv);
+  parentEl.append(newDiv);
 }
 
-function createCheckImg(image) {
+function setImg(image, parentEl) {
   let newImg = document.createElement("img");
   newImg.setAttribute("src", image);
-  display.append(newImg);
+  parentEl.append(newImg);
 }
 
-deleteBtn.addEventListener("click", function () {
-  display.innerHTML = "";
-  topTextIn.value = "";
-  btmTextIn.value = "";
-  imageUrl.value = "";
+display.addEventListener("dblclick", function (e) {
+  e.target.parentNode.remove();
 });
